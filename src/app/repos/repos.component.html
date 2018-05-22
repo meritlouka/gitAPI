@@ -1,0 +1,21 @@
+<h2>User Repos</h2>
+
+<div>
+    <label>name:
+      <input [(ngModel)]="userName" placeholder="name"/>
+    </label>
+    <button (click)="getRepos(userName)" type="button">Search!</button>
+
+</div>
+
+<ul class="repos">
+  <li *ngFor="let repo of repos">
+    <a routerLink="/detail/{{repo.id}}/{{userName}}">
+      <span class="badge">{{repo.id}}</span> {{repo.name}}
+    </a>
+  </li>
+</ul>
+
+ 
+
+<app-repo-detail [repo]="selectedRepo"></app-repo-detail>
