@@ -9,6 +9,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class RepoService {
   private reposUrl ;  // URL to web api
   private repoUrl;
+  public repos : Repo [] ;
+   public repo : Repo  ;
   constructor( private http: HttpClient) { }
 
   getUserRepos(userName): Observable<Repo[]> {
@@ -16,9 +18,12 @@ export class RepoService {
       return this.http.get<Repo[]>(this.reposUrl)
   }
 
-  // getHero(id: number): Observable<Repo> {
-  //    // this.repoUrl = 'https://api.github.com/users/'+userName+'/repos'; 
-  //    //  return this.http.get<Repo>(this.repoUrl)
+  getRepo(id: number,userName: string): Observable<Repo[]> {
+  	//alert(id);alert(userName);
+      this.reposUrl = 'https://api.github.com/users/'+userName+'/repos'; 
+       return this.http.get<Repo[]>(this.reposUrl)
+
+    
    
-  // }
+  }
 }

@@ -20,21 +20,29 @@ export class RepoDetailComponent implements OnInit {
 
  
 ngOnInit(): void {
- 
+
+
   this.getRepo();
+ 
   }
  
   getRepo(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-     const userName = +this.route.snapshot.paramMap.get('userName');
-    alert(id);
-     //  this.repoService.getUserRepos(userName).subscribe(repos => this.repos= repos);
-     //  // this.repo = repos[id];
-     //  for (let key of this.repos) {
-     //     for(var i in key){
-     //          console.log('key: ' +  i + ',  value: ' + key[i]);
-     //     }
-     // }
+     const userName = this.route.snapshot.paramMap.get('userName');
+
+
+      this.repoService.getUserRepos(userName).subscribe(
+          repos => {this.repos = repos ;
+           const arr =  this.repos;
+        
+                 for (var i=0, iLen=arr.length; i<iLen; i++) {
+
+                  if (arr[i].id == id) {this.repo= arr[i];}
+                }
+             }
+        );
+   
+      
 
 
   }
