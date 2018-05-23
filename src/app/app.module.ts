@@ -9,7 +9,7 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import { ReposComponent } from './repos/repos.component';
 import { RepoDetailComponent } from './repo-detail/repo-detail.component';
 import { AppRoutingModule } from './/app-routing.module';
-
+import { AlertModule } from 'ngx-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +23,7 @@ import { AppRoutingModule } from './/app-routing.module';
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
+    AlertModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
