@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Repo } from '../repo';
+import { User } from '../user';
 import { RepoService } from '../repo.service';
 
 @Component({
@@ -10,6 +11,7 @@ import { RepoService } from '../repo.service';
 export class ReposComponent implements OnInit {
   selectedRepo: Repo;
   repos : Repo[];
+  repoOwner: User;
   constructor(private repoService: RepoService) { }
 
  
@@ -23,6 +25,11 @@ export class ReposComponent implements OnInit {
 
   getRepos(userName: string): void {
      
-     this.repoService.getUserRepos(userName).subscribe(repos => this.repos= repos);
+     this.repoService.getUserRepos(userName).subscribe(
+            repos => {
+                this.repos = repos;
+                if(repos.length >0 ){this.repoOwner = repos['0'].owner;}
+             }    
+          );
   } 
 }

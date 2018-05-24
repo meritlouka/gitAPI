@@ -19,11 +19,7 @@ export class RepoService {
   }
 
   getRepo(id: number,userName: string): Observable<Repo[]> {
-  	//alert(id);alert(userName);
       this.reposUrl = 'https://api.github.com/users/'+userName+'/repos'; 
        return this.http.get<Repo[]>(this.reposUrl)
-
-    
-   
   }
 }

@@ -7,9 +7,12 @@
     <button (click)="getRepos(userName)" class="btn btn-default" type="button">Search!</button>
 
 </div>
-
+<div *ngIf="repoOwner">
+	<img border="0" alt="W3Schools" src="{{repoOwner.avatar_url}}" width="100" height="100">
+</div>
 <ul class="repos">
   <li *ngFor="let repo of repos">
+  
     <a routerLink="/detail/{{repo.id}}/{{userName}}">
       <span class="badge">{{repo.id}}</span> {{repo.name}}
     </a>
