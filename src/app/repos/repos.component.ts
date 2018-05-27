@@ -6,7 +6,7 @@ import { RepoService } from '../repo.service';
 @Component({
   selector: 'app-repos',
   templateUrl: './repos.component.html',
-  styleUrls: ['./repos.component.css']
+  styleUrls: ['./repos.component.scss']
 })
 export class ReposComponent implements OnInit {
   selectedRepo: Repo;
