@@ -12,6 +12,7 @@ export class ReposComponent implements OnInit {
   selectedRepo: Repo;
   repos : Repo[];
   repoOwner: User;
+  error : string;
   constructor(private repoService: RepoService) { }
 
  
@@ -24,12 +25,16 @@ export class ReposComponent implements OnInit {
   }
 
   getRepos(userName: string): void {
-     
+     if (!userName) { return; }
      this.repoService.getUserRepos(userName).subscribe(
-            repos => {
-                this.repos = repos;
-                if(repos.length >0 ){this.repoOwner = repos['0'].owner;}
-             }    
+               repos => {
+                  this.repos = repos;
+                  this.repoOwner = null;
+                  if(repos.length >0 ){this.repoOwner = repos['0'].owner;}
+                  
+                }  
+             
+               
           );
   } 
 }

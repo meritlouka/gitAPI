@@ -30,6 +30,7 @@ export class RepoDetailComponent implements OnInit {
 
       this.repoService.getUserRepos(userName).subscribe(
           repos => {this.repos = repos ;
+               
                 const arr =  this.repos;
         
                 for (var i=0, iLen=arr.length; i<iLen; i++) {

@@ -10,13 +10,15 @@ import { ReposComponent } from './repos/repos.component';
 import { RepoDetailComponent } from './repo-detail/repo-detail.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { AlertModule } from 'ngx-bootstrap';
+import { MessagesComponent } from './messages/messages.component';
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     UserDetailComponent,
     ReposComponent,
-    RepoDetailComponent
+    RepoDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
