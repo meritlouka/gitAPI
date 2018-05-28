@@ -14,10 +14,12 @@ import { RepoService }  from '../repo.service';
 export class RepoDetailComponent implements OnInit {
   @Input() repo: Repo;
   repos : Repo[];
+
   constructor(private route: ActivatedRoute,
     private repoService: RepoService,
     private location: Location) 
-  { }
+  { 
+  }
 
  
   ngOnInit(): void {
@@ -27,8 +29,6 @@ export class RepoDetailComponent implements OnInit {
   getRepo(): void {
      const id = +this.route.snapshot.paramMap.get('id');
      const userName = this.route.snapshot.paramMap.get('userName');
-
-
       this.repoService.getUserRepos(userName).subscribe(
           repos => {this.repos = repos ;
                
