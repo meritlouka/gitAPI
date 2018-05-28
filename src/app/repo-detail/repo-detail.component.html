@@ -1,11 +1,8 @@
-<div *ngIf="repo">
+<div class="details" *ngIf="repo">
 
   <h2>{{ repo.name | uppercase }} Details</h2>
-  <div><span>id: </span>{{repo.id}}</div>
-  <div>
-    <span>name: {{repo.name}}
-      
-    </span>
+  <div >
+	  <div><label>id: </label>{{repo.id}}</div>
+	  <div> <label>name:  </label>{{repo.name}}</div>
   </div>
-
 </div>

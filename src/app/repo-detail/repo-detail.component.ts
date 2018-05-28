@@ -9,7 +9,7 @@ import { RepoService }  from '../repo.service';
 @Component({
   selector: 'app-repo-detail',
   templateUrl: './repo-detail.component.html',
-  styleUrls: ['./repo-detail.component.css']
+  styleUrls: ['./repo-detail.component.scss']
 })
 export class RepoDetailComponent implements OnInit {
   @Input() repo: Repo;

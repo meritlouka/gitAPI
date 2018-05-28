@@ -1,12 +1,13 @@
 <h1>User Repos</h1>
 
-<div>
-    <label>name:
-      <input [(ngModel)]="userName" placeholder="name"/>
+<nav class="navbar navbar-expand-lg navbar-dark ">
+    <div>
+    <label>
+      <input class="form-control" [(ngModel)]="userName" placeholder="name"/>
     </label>
-    <button (click)="getRepos(userName)" class="btn btn-default" type="button">Search!</button>
-
-</div>
+    <button (click)="getRepos(userName)" class="btn btn-secondary" type="button">Search</button>
+    </div>
+</nav>
 <div *ngIf="error">
 	 <label>{{error}}</label>
 </div>
@@ -24,4 +25,3 @@
 </ul>
 
  
-
