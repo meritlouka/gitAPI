@@ -3,8 +3,13 @@
  	<div class="card-header">{{ repo.name | uppercase }} Details</div>
   
 	<div class="card-data">
-		  <div><label>id: </label>{{repo.id}}</div>
-		  <div> <label>name:  </label>{{repo.name}}</div>
+		<div><label>Owner Name: </label>{{repo.owner.login}}</div>
+		<div><label>Id: </label>{{repo.id}}</div>
+		<div> <label>Name:  </label>{{repo.name}}</div>
+		<div> <label>Description:  </label>{{repo.description}}</div>
+		<div> <label>Stargazers Count:  </label>{{repo.stargazers_count}}</div>
+		<div> <label>Created At:  </label>{{repo.created_at  | date: 'dd-MM-yyyy'}}</div>
+		  
 	</div>
 
    
