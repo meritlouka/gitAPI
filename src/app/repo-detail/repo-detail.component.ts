@@ -16,7 +16,8 @@ export class RepoDetailComponent implements OnInit {
   repos : Repo[];
   constructor(private route: ActivatedRoute,
     private repoService: RepoService,
-    private location: Location) { }
+    private location: Location) 
+  { }
 
  
   ngOnInit(): void {

@@ -1,8 +1,16 @@
-<div class="details" *ngIf="repo">
+<div class="details">
+<div class="card border-secondary" *ngIf="repo">
+ 	<div class="card-header">{{ repo.name | uppercase }} Details</div>
+  
+	<div class="card-data">
+		  <div><label>id: </label>{{repo.id}}</div>
+		  <div> <label>name:  </label>{{repo.name}}</div>
+	</div>
 
-  <h2>{{ repo.name | uppercase }} Details</h2>
-  <div >
-	  <div><label>id: </label>{{repo.id}}</div>
-	  <div> <label>name:  </label>{{repo.name}}</div>
-  </div>
+   
+</div>
+
+
+<button type="button" class="btn btn-secondary" (click)="goBack()" >Back</button>
+
 </div>

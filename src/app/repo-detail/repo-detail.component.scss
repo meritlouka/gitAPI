@@ -1,3 +1,5 @@
+@import '../app.component.scss';
+
 $secondary-color: #F3969A;
 
 h2 {
@@ -6,11 +8,37 @@ h2 {
   padding-top: 0;
   color: $secondary-color;
 }
-label{
-	color:#6CC3D5 !important;
+
+.btn-secondary{
+	background-color: $secondary-color;
+    border-color: $secondary-color;
+}
+.details{
+	 margin : 2em 2em;
+	.card {
+	    position: relative;
+	    display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-box-orient: vertical;
+	    -webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	    flex-direction: column;
+	    min-width: 0;
+	    color: #5a5a5a;
+	    word-wrap: break-word;
+	    background-color: #fff;
+	    background-clip: border-box;
+	    border: 1px solid rgba(0, 0, 0, 0.125);
+	    border-radius: 0.4rem;
+	    margin : 2em 0em;
+		.card-data{
+		     margin : 1em 2em; 
+		}
+
+    }
 }
 
-.details{
-	margin : 2em 2em;
-	color-text: #5a5a5a;
+.border-secondary {
+    border-color: $secondary-color !important;
 }
