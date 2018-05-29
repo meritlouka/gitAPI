@@ -1,9 +1,5 @@
 /* ReposComponent's private CSS styles */
-
-$li-height :3em;
-$selected-color :#CFD8DC;
-$secondary-color: #F3969A;
-
+@import "../global-var.scss";
 
 .selected {
   background-color: $selected-color !important;
@@ -15,7 +11,7 @@ h1 {
     font-weight: 500;
     line-height: 1.2;
     color:  #5a5a5a;
-    
+
 }
 .btn-secondary {
     color: #fff;
