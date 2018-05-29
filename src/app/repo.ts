@@ -3,7 +3,7 @@ export class Repo {
   name: string;
   description: string;
   stargazers_count:number;
-  created_at:date;
+  created_at:string;
   owner:{
   	login:string;
   	avatar:string;

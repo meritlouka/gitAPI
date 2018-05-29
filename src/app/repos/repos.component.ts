@@ -25,7 +25,10 @@ export class ReposComponent implements OnInit {
   }
 
   getRepos(userName: string): void {
-     if (!userName) { return; }
+     if (!userName) { 
+                  this.repos =[];
+                  this.repoOwner = null; 
+                  return; }
      this.repoService.getUserRepos(userName).subscribe(
                repos => {
                   this.repos = repos;
