@@ -1,7 +1,9 @@
-<div *ngIf="messageService.messages.length">
+<div class="jumbotron msg-container" *ngIf="messageService.messages.length">
+    <div class="bs-component">       
+	    <div class="alert alert-dismissible alert-danger" *ngFor='let message of messageService.messages'>   
+	        <strong >Oh snap!  </strong> <a href="#" class="alert-link">{{message}} </a> 
+	    </div>
 
-  <button class="clear"
-          (click)="messageService.clear()">clear</button>
-  <div *ngFor='let message of messageService.messages'> {{message}} </div>
-
+	     <button class="btn btn-secondary" (click)="messageService.clear()">clear</button>
+    </div>
 </div>

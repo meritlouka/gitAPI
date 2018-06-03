@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Repo } from '../repo';
 import { User } from '../user';
 import { RepoService } from '../repo.service';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-repos',
@@ -13,7 +14,7 @@ export class ReposComponent implements OnInit {
   repos : Repo[];
   repoOwner: User;
   error : string;
-  constructor(private repoService: RepoService) { }
+  constructor(private repoService: RepoService ,private messageService: MessageService) { }
 
  
   ngOnInit() {
@@ -26,9 +27,11 @@ export class ReposComponent implements OnInit {
 
   getRepos(userName: string): void {
      if (!userName) { 
+          this.messageService.add('No UserName Entered');     
                   this.repos =[];
                   this.repoOwner = null; 
-                  return; }
+                  return; 
+       }
      this.repoService.getUserRepos(userName).subscribe(
                repos => {
                   this.repos = repos;

@@ -22,7 +22,6 @@
     "@angular/router": "^6.0.2",
     "bootstrap": "^4.1.1",
     "broccoli-merge-trees": "^3.0.0",
-    "broccoli-sass": "^0.7.0",
     "core-js": "^2.5.4",
     "glob": "^7.1.2",
     "lodash": "^4.17.10",
